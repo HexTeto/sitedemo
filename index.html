@@ -79,7 +79,8 @@
                     <li><a href="#products" class="smooth-scroll">产品</a></li>
                     <li><a href="#solutions" class="smooth-scroll">解决方案</a></li>
                     <li><a href="#partners" class="smooth-scroll">合作伙伴</a></li>
-                    <li class="menu-btn"><a href="#footer" class="smooth-scroll">联系我们</a></li>
+                    <li><a href="#footer" class="smooth-scroll">联系我们</a></li>
+                    <li class="menu-btn"><a href="#footer" class="smooth-scroll">注册/登录</li>
                 </ul>
             </div>
         </div>
@@ -461,6 +462,42 @@
     <!-- #footer -->
     <footer id="footer">
         <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <h4 style="color:white;">新用户注册</h4>
+                    <form name="signup" id="signup" method="post" action="signup.php">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="请输入用于订阅的电子邮件地址:" name="signup_email" id="signup_email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="请输入密码（请使用 8-16 位大小写字母及数字组成的强密码）:" name="signup_pwd" id="sign_pwd" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="请再次输入密码以确认:" name="signup_pwd_confirm" id="signup_pwd_confirm" required>
+                        </div>
+                        <div class="form-group" style="margin:40px;">
+                            <button type="submit" name="signup_btn" id="signup_btn">注册</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+                    <h4 style="color:white;">用户登录</h4>
+                    <form name="login" id="login" method="post" action="login.php">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="请输入已有订阅的电子邮件地址" name="login_email" id="login_email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="请输入密码" name="login_pwd" id="login_pwd" required>
+                        </div>
+                        <div class="form-group" style="margin:104px;">
+                            <button type="submit" name="login_btn" id="login_btn">登录</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <br/>
+            <br/>
             <div class="footer-logo">
                 <img src="images/logow.png" alt="Logo">
             </div>
