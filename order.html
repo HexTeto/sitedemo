@@ -43,19 +43,23 @@
                 <div class="col-xs-12 col-md-6">
                     <form id="form1" method="post">
                         <div class="form-group">
-                            <h4>注册</h4>
+                            <h4>注册用户ID</h4>
                         </div>
                         <div class="form-group">
-                            <label for="username">用户名<span style="color:red;">*</span></label>
-                            <input type="text" class="form-control" id="username" placeholder="Username:" maxlength="8">
+                            <label for="firstname">姓<span style="color:red;">*</span></label>
+                            <input type="text" class="form-control" id="firstname" maxlength="8" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">密码<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;请使用 8-16 位大小写字母及数字的强密码</span></label>
-                            <input type="password" class="form-control" id="password" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}">
+                            <label for="lastname">名<span style="color:red;">*</span></label>
+                            <input type="text" class="form-control" id="lastname" maxlength="8" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">电子邮件<span style="color:red;">*</span></label>
-                            <input type="email" class="form-control" id="email" placeholder="xxx@sample.com">
+                            <label for="company">公司或组织</label>
+                            <input type="text" class="form-control" id="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">管理员邮箱<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;用于接收帐单和安全信息通知，进行账户安全操作</span></label>
+                            <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="nation">国家或地区<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;注册后无法更改</span></label>
@@ -63,11 +67,6 @@
                                 <option value="global" disabled>Global</option>
                                 <option value="cn" selected="selected">中国</option>
                             </select>
-                        </div>
-                        <br/>
-                        <br/>
-                        <div class="form-group">
-                            <h4>创建 ID</h4>
                         </div>
                         <div class="form-group">
                             <table>
@@ -85,14 +84,33 @@
                                         <input name="dominid" type="text" class="form-control" maxlength="20" placeholder="Domain" style="text-align:center; width:192px; height:32px;" required>
                                     </td>
                                     <td>
-                                        <span style="color:red;">.partner.onmschina.cn</span>
+                                        <span>.partner.onmschina.cn</span>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="form-group">
-                            <label for="adpwd">密码<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;请使用 8-16 位大小写字母及数字的强密码</span></label>
-                            <input type="password" class="form-control" id="adpwd" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}">
+                            <label for="pwd">密码<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;请使用 8-16 位大小写字母及数字的强密码</span></label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm">再次输入密码以验证<span style="color:red;">*</span></label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="plans">确认您的订阅计划<span style="color:red;">*</span></label>
+                            <select id="plans" class="form-control" required>
+                                <option value="exchange" disabled>Exchange Online 计划</option>
+                                <option value="office01">Office 365 商业协作版 - ￥30/用户/月</option>
+                                <option value="office02">Office 365 商业版 - ￥50/用户/月</option>
+                                <option value="office03">Office 365 商业高级版 - ￥80/用户/月</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subseat">用户数量</label>
+                            <input type="number" id="subseat" min="1" max="300" required>
+                            <label for="subtime">订阅时间</label>
+                            <input type="number" id="subtime" min="1" max="24" required>
                         </div>
                         <br/>
                         <br/>
@@ -105,7 +123,7 @@
                         <br/>
                         <br/>
                         <div class="form-group">
-                            <input type="submit" id="submit" value="提交" style="width:128px; text-align:center; font-size:24px;" onclick="alert('对不起, 我们暂时还不能开放在线订购功能, 详情请发送邮件至 unisvnet@unisvianet.com; 或拨打电话至 +86 (592) 8262068 咨询。谢谢！')">
+                            <input type="submit" id="submit" value="下单并支付" style="text-align:center;" onclick="alert('对不起, 我们暂时还不能开放在线订购功能, 详情请发送邮件至 unisvnet@unisvianet.com; 或拨打电话至 +86 (592) 8262068 咨询。谢谢！')">
                         </div>
                     </form>
                 </div>       
