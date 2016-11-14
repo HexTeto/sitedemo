@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">管理员邮箱<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;用于接收帐单和安全信息通知，进行账户安全操作</span></label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" name="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="nation">国家或地区<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;注册后无法更改</span></label>
@@ -75,7 +75,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input name="userid" type="text" class="form-control" maxlength="20" placeholder="User" style="text-align:center; width:192px; height:32px;" required>
+                                        <input name="username" type="text" class="form-control" maxlength="20" placeholder="User" style="text-align:center; width:192px; height:32px;" required>
                                     </td>
                                     <td>
                                         <span>@</span>
@@ -91,11 +91,11 @@
                         </div>
                         <div class="form-group">
                             <label for="pwd">密码<span style="color:red;">*</span><span style="font-size:12px;">&nbsp;&nbsp;请使用 8-16 位大小写字母及数字的强密码</span></label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required>
+                            <input type="password" class="form-control" name="password" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required>
                         </div>
                         <div class="form-group">
                             <label for="confirm">再次输入密码以验证<span style="color:red;">*</span></label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required>
+                            <input type="password" class="form-control" name="confirm" placeholder="Password:" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required>
                         </div>
                         <div class="form-group">
                             <label for="plans">确认您的订阅计划<span style="color:red;">*</span></label>
